@@ -25,7 +25,7 @@ public class FibonacciSeries {
 		ArrayList<Integer> arr = new ArrayList<>();
 		
 		while(SIZE > 0){
-			temp=a1;
+			temp=a2;
 			a2=a1+a2;
 			a1=temp;
 			if(a1 >= n) {
