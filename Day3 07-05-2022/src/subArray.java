@@ -2,14 +2,14 @@ import java.util.*;
 
 class subArray
 {
-	static void allSubset(int arr[], int n) 
+	static void allSubset(String arr[], int n) 
 	{ 
 	    int subset_size = (int)Math.pow(2, n);
 	    int i, j;
-	    ArrayList<ArrayList<Integer>> final_subset = new ArrayList<>();
+	    ArrayList<ArrayList<String>> final_subset = new ArrayList<>();
 	    for(i=1;i<subset_size;i++) 
 	    {
-	        ArrayList<Integer> subset = new ArrayList<>();
+	        ArrayList<String> subset = new ArrayList<>();
 	        for(j=0;j<n;j++)
 	        { 
 	            // Check if jth bit in the i is set
@@ -25,10 +25,10 @@ class subArray
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter Size of Set:");
 		int n = sc.nextInt();
-		int[] arr = new int[n];
+		String[] arr = new String[n];
 		System.out.print("Enter set elements:");
 		for (int i=0;i<n ;i++ ) {
-			arr[i] = sc.nextInt();
+			arr[i] = sc.next();
 		}
 		allSubset(arr,n);
 	}
